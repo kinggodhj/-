@@ -2,6 +2,11 @@
 
 ## CNN
 
+![image](https://user-images.githubusercontent.com/37800546/148029367-009d312b-f76e-4ebb-a0d0-02b3c55a9d24.png)
+
+- Pooling layer는 학습하는 parameter가 없음 (값만 뽑는 것이므로) + noize 제거 효과
+
+
 - output size 계산: (이미지 크기 - 필터 크기) / stride + 1
 
 <details>
@@ -17,8 +22,7 @@
 
     7x7 필터 1개를 사용하면, 7*7 = 49개의 weight을 학습
 
-    ![image](https://user-images.githubusercontent.com/37800546/148028008-e22ee20b-bd1c-4c69-84cb-5b2c253db6a4.png)
-  
+![image](https://user-images.githubusercontent.com/37800546/148028008-e22ee20b-bd1c-4c69-84cb-5b2c253db6a4.png)  
 </details>
 
 <details>
@@ -44,6 +48,8 @@
       보정된 입력 데이터: (2+32+2)x(2+32+2) = 36x36
   
       출력 데이터: (36 - 5 +1)x(36 - 5 +1) = 32x32
+    
+      * Padding 사이즈 = (Filter 사이즈 - 1) / 2 로 설정하면 크기를 동일하게 유지 가능
   
     - 경계면의 정보 살릴 수 있음
     
